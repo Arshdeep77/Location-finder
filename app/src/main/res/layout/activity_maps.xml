@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:id="@+id/par"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    >
+
+    <Button
+        android:id="@+id/exitBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
+        android:backgroundTint="#80000000"
+
+
+        android:text="exit"
+        map:layout_constraintLeft_toLeftOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UsingOnClickInXml" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        tools:context=".MapsActivity" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/map">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            map:cardBackgroundColor="@color/black" />
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+
+
+        android:background="@color/white"
+
+
+
+
+
+        android:clickable="true"
+
+
+        android:src="@drawable/share"
+        map:backgroundTint="#CCE65100"
+      map:tint="@null"
+
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="453dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintRight_toRightOf="parent"
+        map:layout_constraintLeft_toLeftOf="parent"
+
+        android:translationZ="250dp"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
